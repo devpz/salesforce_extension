@@ -1,0 +1,68 @@
+div.ets-button {
+	flex-direction: column;
+	justify-content: center;
+	border-radius: 0.5rem;
+	background-color: #1d4ed8;
+}
+
+div.ets-button:hover {
+	background-color: #3167fb;
+	border-radius: 0.5rem;
+}
+
+ul.ets-header {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	color: #ffffff;
+	font-weight: 700;
+	text-align: center;
+	justify-content: center;
+	background-color: #1d4ed8;
+	border-radius: 0.5rem;
+}
+ul.ets-header:hover {
+	cursor: pointer;
+}
+
+ul.ets-option {
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	background-color: #dbeafe;
+	color: #000000;
+	text-align: center;
+	display: none;
+}
+ul.ets-option:hover {
+	cursor: pointer;
+	background-color: #dbdefe;
+}
+
+ul.ets-option-show {
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	background-color: #dbeafe;
+	color: #000000;
+	text-align: center;
+	display: block;
+}
+
+ul.ets-option-show:hover {
+	cursor: pointer;
+	background-color: #dbdefe;
+}
+
+div.ets-text {
+	border-top: 5px;
+	border-top-color: #000000;
+	border-top-style: double;
+	margin-top: 0.5rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	text-align: justify;
+}

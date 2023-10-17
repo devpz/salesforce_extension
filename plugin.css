@@ -1,0 +1,36 @@
+.three-columns {
+	display: flex;
+}
+
+.three-columns > * {
+	width: calc(100% / 3);
+	padding: 0.25rem;
+}
+
+.flag {
+	width: 50px;
+	height: 50px;
+}
+.flag:hover {
+	cursor: pointer;
+	transform: scale(1.1);
+}
+
+.flag-list {
+	list-style-type: none;
+	display: contents;
+}
+
+.samsung-title {
+	text-align: center;
+	font-size: 26px;
+	font-weight: 600;
+	padding: auto;
+}
+
+.secondary-heading {
+	text-align: center;
+	font-size: 20px;
+	font-weight: 300;
+	padding: auto;
+}

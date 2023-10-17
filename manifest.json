@@ -1,0 +1,50 @@
+{
+	"name": "ETS SalesForce Translator",
+	"version": "0.0.1",
+	"manifest_version": 3,
+	"description": "Case Translator",
+	"action": {
+		"default_popup": "default.html",
+		"default_title": "extension"
+	},
+	"icons": {
+		"16": "./assets/lang_icon.png",
+		"32": "./assets/lang_icon.png",
+		"48": "./assets/lang_icon.png",
+		"128": "./assets/lang_icon.png"
+	},
+	"background": {
+		"service_worker": "./app.js"
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"https://*.sec-b2b.lightning.force.com/*",
+				"https://*.sec-b2b--fs.lightning.force.com/*"
+			],
+			"js": ["app.js"],
+			"css": ["fix.css", "plugin.css"],
+			"html": ["default.html"],
+			"permissions": [
+				"https://translate.samsung.com/apis/v1/*",
+				"https://translate.sec.samsung.net/utrans/apis/v1/*"
+			],
+			"host_permissions": ["https://*/"],
+			"content_security_policy": {
+				"extension_pages": "default-src 'self'; connect-src https://* data: blob: filesystem:;"
+			}
+		}
+	],
+	"permissions": [
+		"activeTab",
+		"scripting",
+		"storage",
+		"<all_urls>",
+		"https://translate.samsung.com/apis/v1/*",
+		"https://translate.sec.samsung.net/utrans/apis/v1/*"
+	],
+	"content_security_policy": {
+		"extension_pages": "script-src 'self' ; object-src 'self';",
+		"sandbox": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval'; child-src 'self';"
+	}
+}
